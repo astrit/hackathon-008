@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react"
 import { IBM_Plex_Mono, JetBrains_Mono, Silkscreen } from "next/font/google"
 import Inter from "$/fonts/Inter"
-import T26 from "$/fonts/t26"
 
 const silk = Silkscreen({
   subsets: ["latin"],
@@ -37,7 +36,6 @@ export default function Fonts({ children }: { children: React.ReactNode }) {
             --font-inter: ${Inter.style.fontFamily}; 
             --font-silk: ${silk.style.fontFamily};
             --font-jetbrains-mono: ${jetBrains.style.fontFamily};
-            --font-t26: ${T26.style.fontFamily};
             --font-ibm-plex: ${IBM.style.fontFamily};
         }`)
       document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet]

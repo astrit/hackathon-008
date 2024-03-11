@@ -98,7 +98,6 @@ figure[data-rehype-pretty-code-figure] {
     .fake-tab {
       line-height: 1;
       text-transform: uppercase;
-      font-family: var(--font-t26);
       border: 1px solid var(--color-text-4);
       background-color: var(--color-text-4);
       padding: 8px 14px;

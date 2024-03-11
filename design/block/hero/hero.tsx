@@ -67,22 +67,22 @@ export default function Hero() {
       <span>{`seb`}</span> },
     { name: "hero-loc", markup: <span>{`green`}</span> },
   ],
-  "searching": [
-    {
-      name: "hero-fka",
-      markup: (
-        <>
-          <span className="mono">{`Press`}</span>
-          <button onClick={toggleCmd}>
-            <Icon name="cmd-search" />
-            {isWindows ? <span>{`/`}</span> : <span>{`⌘K`}</span>}
-          </button>
-          <span className="mono">{`to start`}</span>
-          <span>{`⌃`}</span>
-        </>
-      ),
-    },
-  ]
+  // "searching": [
+  //   {
+  //     name: "hero-fka",
+  //     markup: (
+  //       <>
+  //         <span className="mono">{`Press`}</span>
+  //         <button onClick={toggleCmd}>
+  //           <Icon name="cmd-search" />
+  //           {isWindows ? <span>{`/`}</span> : <span>{`⌘K`}</span>}
+  //         </button>
+  //         <span className="mono">{`to start`}</span>
+  //         <span>{`⌃`}</span>
+  //       </>
+  //     ),
+  //   },
+  // ]
 }
 
   return (

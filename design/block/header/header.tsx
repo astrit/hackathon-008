@@ -1,15 +1,8 @@
 import { ReactNode } from "react"
-import Menu from "@/menu/menu"
 import Nav from "@/nav/nav"
-import Nobori from "@/nobori/nobori"
-import Search from "@/search/search"
-import { Toggle } from "@/toggle/toggle"
 
 import "@/header/header.css"
 
-import Icon from "@/icon/icon"
-import Separator from "@/separator/separator"
-import Status from "@/status/status"
 import Tunes from "@/tunes/tunes"
 
 function Left({ children }: { children: ReactNode }) {
@@ -25,7 +18,9 @@ export default function Header() {
       <Left>
         <Nav />
       </Left>
-      <Right>Right side</Right>
+      <Right>
+        <Tunes />
+      </Right>
     </header>
   )
 }

@@ -48,7 +48,7 @@ export async function GET(req: NextRequest) {
             color: "#ffffff",
           }}
         >
-          <div className="bottom">astrit.co</div>
+          <div className="bottom">seb-greeb.vercel.app</div>
         </footer>
       </div>
     ),

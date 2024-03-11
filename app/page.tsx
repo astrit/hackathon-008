@@ -2,10 +2,6 @@
 
 import React, { useContext } from "react"
 import Hero from "@/hero/hero"
-import Link from "@/link/link"
-import List from "@/list/list"
-import { Tweet } from "@/tweet/tweet"
-import Content from "&/content/content"
 import Home from "&/home/home"
 import { DataContext } from "$/content/provider"
 
