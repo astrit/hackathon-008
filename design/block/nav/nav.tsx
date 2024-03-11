@@ -9,8 +9,8 @@ import "@/nav/nav.css"
 
 const Links = [
   { href: "/", label: "Green GPT" },
-  { href: "/lore", label: "Features" },
-  { href: "/craft", label: "A11y" },
+  { href: "/features", label: "Features" },
+  { href: "/a11y", label: "A11y" },
 ]
 
 export default function Nav() {

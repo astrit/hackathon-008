@@ -61,28 +61,6 @@ export default function Hero() {
     { name: "hero-sin", markup: <span>{`contrast check`}</span> },
     { name: "hero-sin", markup: <span>{`contrast check`}</span> },
   ],
-  "work": [
-    { name: "hero-now", 
-      markup: 
-      <span>{`seb`}</span> },
-    { name: "hero-loc", markup: <span>{`green`}</span> },
-  ],
-  // "searching": [
-  //   {
-  //     name: "hero-fka",
-  //     markup: (
-  //       <>
-  //         <span className="mono">{`Press`}</span>
-  //         <button onClick={toggleCmd}>
-  //           <Icon name="cmd-search" />
-  //           {isWindows ? <span>{`/`}</span> : <span>{`⌘K`}</span>}
-  //         </button>
-  //         <span className="mono">{`to start`}</span>
-  //         <span>{`⌃`}</span>
-  //       </>
-  //     ),
-  //   },
-  // ]
 }
 
   return (

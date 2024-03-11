@@ -45,28 +45,6 @@ export function Theme({ children, ...props }: ThemeProviderProps) {
 
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
-  useEffect(() => {
-    if (typeof window !== "undefined" && isAudio) {
-      audioRef.current = new Audio("/sfx/link.mp3")
-      if (audioRef.current) {
-        audioRef.current.volume = 0.1
-      }
-    } else {
-      audioRef.current = null
-    }
-  }, [isAudio])
-
-  useEffect(() => {
-    console.log(`Route changed to: ${pathname}`)
-    setChanges((prev) => prev + 1)
-
-    if (typeof window !== "undefined" && isAudio) {
-      const routeChangeAudio = new Audio("/sfx/digital.mp3")
-      routeChangeAudio.volume = 0.2
-      routeChangeAudio.play()
-    }
-  }, [pathname, isAudio])
-
   const toggleCmd = () => {
     setIsOpen((prevOpen) => !prevOpen)
   }
@@ -107,7 +85,7 @@ export function Theme({ children, ...props }: ThemeProviderProps) {
           duration={4428}
         />
         <CMD isOpen={isOpen} toggleCmd={toggleCmd} />
-        <Cursor />
+        {/* <Cursor /> */}
       </Controller.Provider>
     </NextThemesProvider>
   )
