@@ -59,6 +59,17 @@ export default function RootLayout({
           enableSystem={true}
         >
           <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+          <script src="/gest.js"></script>
+          {/* <script src="https://cdn.jsdelivr.net/npm/handtrackjs@0.0.6/dist/handtrack.min.js"></script>
+
+          <script src="https://unpkg.com/@tensorflow/tfjs-core@3.7.0/dist/tf-core.js"></script>
+
+          <script src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@3.7.0/dist/tf-backend-webgl.js"></script>
+
+          <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection@2.0.0/dist/hand-pose-detection.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1646424915/hands.min.js"></script>
+          <script src="https://raw.githubusercontent.com/andypotato/fingerpose/master/dist/fingerpose.js"></script> */}
+
           <Favicon />
           <Data>
             <Fonts>

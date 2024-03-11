@@ -8,6 +8,7 @@ import { Controller } from "$/theme/provider"
 
 import "@/hero/hero.css"
 
+import Motion from "@/motion/motion"
 import Voice from "@/voice/voice"
 
 interface HeroItem {
@@ -79,6 +80,7 @@ export default function Hero() {
         ))}
 
         <Voice />
+        <Motion />
       </div>
     </div>
   )
