@@ -1,0 +1,43 @@
+.astrit {
+  svg {
+    height: 120px;
+    stroke: none;
+    transform: translate3d(-80px, 0, 0);
+    mask-image: linear-gradient(to right, #000, transparent);
+
+    path {
+      stroke-width: 1;
+      stroke: var(--color-text-2);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: signature 1820ms linear forwards;
+
+      &[path-one] {
+        animation-delay: 740ms;
+        animation-duration: 2000ms;
+      }
+
+      &[path-three] {
+        animation-delay: 840ms;
+      }
+
+      &[path-four] {
+        animation-delay: 1820ms;
+        animation-duration: 800ms;
+      }
+
+      &[path-five] {
+        animation-delay: 2440ms;
+        animation-duration: 1000ms;
+      }
+    }
+  }
+}
+
+@keyframes signature {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

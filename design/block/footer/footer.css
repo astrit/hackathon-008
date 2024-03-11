@@ -1,0 +1,29 @@
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: var(--color-text-2);
+  position: fixed;
+  inset: auto 0 0 0;
+  padding: 40px;
+  pointer-events: none;
+  z-index: 1;
+
+  .sides {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2ch;
+    opacity: 0;
+    animation: fade 468ms ease forwards;
+    animation-delay: 448ms;
+    translate: 0 0.4lh;
+    pointer-events: initial;
+
+    .split {
+      opacity: 0.4;
+    }
+  }
+}

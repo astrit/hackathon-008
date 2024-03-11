@@ -1,0 +1,6 @@
+.toggle {
+  svg {
+    stroke-width: 2;
+    stroke: currentColor;
+  }
+}

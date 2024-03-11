@@ -1,0 +1,24 @@
+.map {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  position: sticky;
+  top: 40px;
+  font-size: 10px;
+  gap: 1lh;
+
+  .details,
+  .series,
+  nav,
+  .like {
+    display: flex;
+    padding: 8px 12px;
+    border: 1px solid var(--color-text-3);
+    border-radius: 6px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+}

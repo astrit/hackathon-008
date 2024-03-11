@@ -1,0 +1,176 @@
+@import "reset.css";
+@import "tokens.css";
+@import "layout.css";
+@import "motion.css";
+@import "text.css";
+@import "fluid.css";
+@import "syntax.css";
+
+html {
+  color-scheme: dark light;
+  /* cursor: none; */
+}
+
+@media (max-width: 1024px) {
+  html {
+    cursor: auto;
+  }
+}
+
+body {
+  letter-spacing: normal;
+  scroll-behavior: smooth;
+  scroll-padding-top: 160px;
+  overscroll-behavior: contain;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+  font-family: var(--font-family);
+  font-variant-numeric: slashed-zero tabular-nums;
+  font-feature-settings: "zero" 1;
+  color: var(--color-text-2);
+  background: var(--color-bg);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  min-height: 100vh;
+
+  /* scrollbar-color: hsl(0 0% 10% / 0.5) transparent;
+  scrollbar-width: thin; */
+}
+
+/* prettier-ignore */
+[data-texture] {
+  
+  --_color-box: rgba(255, 255, 255, 0.04);
+  --_color-dot: rgba(255, 255, 255, 0.06);
+  --_color-line: rgba(255, 255, 255, 0.08);
+
+  --_main-gradient: linear-gradient( to bottom, transparent, var(--color-bg));
+  --_main-gradient-size: cover;
+  --_main-gradient-position: center;
+  --_main-gradient-repeat: no-repeat;
+
+  --_dot-one: radial-gradient(var(--_color-dot) 1px, transparent 0);
+  --_dot-one-size: 40px 40px;
+  --_dot-one-position: 0 0;
+  --_dot-one-repeat: repeat;
+
+  --_dot-two: radial-gradient(var(--_color-dot) 1px, transparent 0);
+  --_dot-two-size: 40px 40px;
+  --_dot-two-position: 20px 20px;
+  --_dot-two-repeat: repeat;
+
+  --_box-inline: linear-gradient( to left, var(--_color-box) 1px, transparent 0px, transparent);
+  --_box-inline-size: 6px 100%;
+  --_box-inline-position: 18px 100%;
+  --_box-inline-repeat: repeat-x;
+
+  --_box-block: linear-gradient( to bottom, var(--_color-box) 1px, transparent 0px, transparent);
+  --_box-block-size: 100% 6px;
+  --_box-block-position: 100% 18px;
+  --_box-block-repeat: repeat-y;
+
+  --_line-inline: linear-gradient(to right, transparent 399px, var(--_color-line) 1px);
+  --_line-inline-size: 400px 100%;
+  --_line-inline-position: left;
+  --_line-inline-repeat: repeat-x;
+
+  --_line-block: linear-gradient(to top, transparent 399px, var(--_color-line) 1px);
+  --_line-block-size: 100% 400px;
+  --_line-block-position: top;
+  --_line-block-repeat: repeat-y;
+  
+
+  --bg:
+    var(--_main-gradient),
+    var(--_dot-one),
+    var(--_dot-two),
+    var(--_box-inline),
+    var(--_box-block),
+    var(--_line-inline),
+    var(--_line-block) 
+  ;
+
+  --size:
+    var(--_main-gradient-size),
+    var(--_dot-one-size),
+    var(--_dot-two-size),
+    var(--_box-inline-size),
+    var(--_box-block-size),
+    var(--_line-inline-size),
+    var(--_line-block-size)
+  ;
+
+  --position:
+    var(--_main-gradient-position),
+    var(--_dot-one-position),
+    var(--_dot-two-position),
+    var(--_box-inline-position),
+    var(--_box-block-position),
+    var(--_line-inline-position),
+    var(--_line-block-position)
+  ;
+
+  --repeat:
+    var(--_main-gradient-repeat),
+    var(--_dot-one-repeat),
+    var(--_dot-two-repeat),
+    var(--_box-inline-repeat),
+    var(--_box-block-repeat),
+    var(--_line-inline-repeat),
+    var(--_line-block-repeat)
+  ;
+
+  background-color: var(--color-bg);
+  background-image: var(--bg);
+  background-size: var(--size);
+  background-position: var(--position);
+  background-repeat: var(--repeat);
+  background-attachment: fixed;
+}
+
+/* scrollbar */
+
+html {
+  /* scrollbar-color: var(--color-text-4) transparent; */
+  /* scrollbar-width: thin; */
+  /* scrollbar-base-color: transparent; */
+  /* scrollbar-track-color: transparent; */
+  /* scrollbar-color: rgba(255, 0, 0, 0) transparent; */
+
+  &::-webkit-scrollbar-track {
+    /* pointer-events: none; */
+    background-image: linear-gradient(
+      to bottom,
+      transparent 10px,
+      var(--color-text-4) 1px
+    );
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: 10px 11px;
+    background-color: transparent;
+    overflow: overlay;
+  }
+
+  &::-webkit-scrollbar {
+    width: 20px;
+    height: 100%;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    min-height: 10px;
+    max-height: 10px;
+    border-radius: 200px;
+    background: linear-gradient(to bottom, transparent, var(--color-text-1) 1px)
+      no-repeat center center / 8px 1px;
+    backdrop-filter: blur(20px);
+  }
+
+  &::-webkit-scrollbar-thumb:active {
+    backdrop-filter: blur(20px);
+    border-color: var(--color-text-4);
+  }
+}

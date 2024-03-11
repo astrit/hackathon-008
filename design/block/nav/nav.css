@@ -1,0 +1,16 @@
+header nav {
+  display: flex;
+  flex-direction: row;
+  gap: 4ch;
+  padding-left: 4ch;
+
+  a {
+    transition: all 0.4s;
+    @media (hover: hover) {
+      &:hover,
+      &.active {
+        color: var(--color-text-1);
+      }
+    }
+  }
+}

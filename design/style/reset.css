@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  backface-visibility: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* ::selection {
+  color: var(--color-teal);
+} */
+
+ol,
+ul,
+li,
+menu {
+  list-style: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  color: currentColor;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+[clamp] {
+  text-overflow: "ellipsis";
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+[hidden] {
+  display: none;
+}
+
+::marker {
+  content: "—";
+  display: none;
+}
+
+svg {
+  height: 1lh;
+  width: auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--stroke-width);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+button {
+  appearance: none;
+  border: none;
+  background: none;
+  color: currentColor;
+}
+
+@media (hover: none) {
+  *:hover {
+    background-color: initial;
+  }
+}

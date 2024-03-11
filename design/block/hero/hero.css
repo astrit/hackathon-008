@@ -1,0 +1,106 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-text-3);
+  position: sticky;
+  top: 30vh;
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 12px;
+    gap: 2lh;
+  }
+
+  .sec {
+    display: flex;
+    flex-direction: column;
+    gap: 1lh;
+
+    opacity: 0;
+    animation: fade 668ms ease forwards;
+    translate: 0 0.4lh;
+
+    &.intro {
+      animation-delay: 40ms;
+    }
+
+    &.work {
+      animation-delay: 160ms;
+    }
+
+    &.skills {
+      animation-delay: 280ms;
+    }
+
+    &.searching {
+      animation-delay: 400ms;
+    }
+
+    .sub {
+      height: 10px;
+      display: flex;
+      flex-direction: row;
+      gap: 1ch;
+    }
+  }
+
+  .hero-now {
+    color: var(--color-text-2);
+  }
+
+  .fade {
+    opacity: 0.4;
+  }
+
+  .hero-fka {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 1ch;
+
+    button {
+      display: flex;
+      gap: 1ch;
+      border-radius: 200px;
+      border: 1px solid var(--color-text-3);
+      padding: 6px 10px;
+      color: var(--color-text-1);
+      font-size: 10px;
+      cursor: pointer;
+
+      &:hover {
+        background: var(--color-text-3);
+      }
+
+      span {
+        width: 17px;
+      }
+    }
+  }
+
+  .hero-pro {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5ch;
+    span {
+      color: var(--color-text-1);
+    }
+  }
+
+  .mono {
+    font-family: var(--font-jetbrains-mono);
+  }
+
+  a {
+    color: var(--color-text-2);
+    &:hover {
+      color: var(--color-text-1);
+      text-underline-offset: 0.2ex;
+    }
+  }
+}
+
+/* hero comp backround */

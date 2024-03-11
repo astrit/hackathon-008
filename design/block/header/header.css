@@ -1,0 +1,41 @@
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1;
+  padding: 40px;
+  padding-left: 100px;
+  pointer-events: none;
+  z-index: 2;
+
+  .sides {
+    opacity: 0;
+    animation: fade 468ms ease forwards;
+    animation-delay: 448ms;
+    translate: 0 -0.4lh;
+    pointer-events: initial;
+  }
+
+  .left {
+    display: flex;
+    gap: 6ch;
+    align-items: center;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 5ch;
+
+    svg {
+      height: initial;
+      width: auto;
+    }
+
+    .separator {
+      margin-inline: 2ch;
+    }
+  }
+}

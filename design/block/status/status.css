@@ -1,0 +1,39 @@
+.status {
+  --size: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1ch;
+  font-size: var(--size);
+  text-transform: uppercase;
+  font-family: var(--font-t26);
+
+  .signal {
+    display: flex;
+    width: calc(var(--size) - 2px);
+    height: 2px;
+    border-radius: 200px;
+    color: var(--color-teal);
+    background-color: currentColor;
+    backface-visibility: hidden;
+    display: grid;
+    place-content: center;
+
+    &::before {
+      grid-area: 1/1;
+      display: flex;
+      content: " ";
+      width: calc(var(--size) + 2px);
+      height: 4px;
+      background: currentColor;
+      border-radius: 200px;
+      animation: pulse 4s ease-in-out infinite;
+      filter: blur(6px);
+      transform-origin: center;
+    }
+
+    .unavailable & {
+      color: var(--color-red);
+    }
+  }
+}

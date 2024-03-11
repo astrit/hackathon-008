@@ -1,0 +1,5 @@
+.tunes {
+  &.on {
+    color: var(--color-text-1);
+  }
+}

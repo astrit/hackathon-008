@@ -1,0 +1,138 @@
+.list {
+  --item-height: 74px;
+  --item-gap: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-inline: 40px;
+  counter-reset: items;
+  padding-block: 30vh;
+  padding-bottom: 50vh;
+  opacity: 0;
+  animation: fade 668ms ease forwards;
+  translate: 0 10lh;
+
+  .item {
+    background-color: hsla(240, 23%, 6%, 0.8);
+    backdrop-filter: blur(20px);
+    border: 2px solid hsla(356.54, 67.853%, 14.872%, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    inline-size: 45ch;
+    gap: 1lh;
+    scroll-snap-align: center;
+    transition: all 240ms;
+    animation-name: scale, scale;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal, reverse;
+    animation-timeline: view();
+    animation-range:
+      entry 0% entry 550%,
+      exit -400% exit 500%;
+    counter-increment: items;
+
+    &::after {
+      content: "· " counters(items, ".", decimal-leading-zero);
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      font-family: var(--font-t26);
+      opacity: 0.4;
+    }
+
+    &:hover {
+      transition: all 642ms;
+      color: var(--color-text-1);
+      transform: scale(1.1) perspective(600px) rotateY(-10deg);
+    }
+
+    .title {
+      font-size: 12px;
+      text-wrap: balance;
+    }
+
+    summary {
+      display: flex;
+      gap: 1ch;
+      color: var(--color-text-3);
+    }
+  }
+
+  .deco {
+    z-index: 1;
+    position: relative;
+
+    .item {
+      z-index: 2;
+      position: relative;
+    }
+
+    .glow {
+      z-index: 0;
+      display: flex;
+      background-color: hsla(352.07, 78.476%, 41.344%);
+      border-radius: 400px;
+      width: 120px;
+      height: 20px;
+      left: 20px;
+      top: 20px;
+      margin-top: auto;
+      position: absolute;
+      margin-block: auto;
+      transition: all 426ms;
+      animation-name: figure, figure;
+      animation-fill-mode: both;
+      animation-timing-function: ease-in-out;
+      animation-direction: normal, reverse;
+      animation-timeline: view();
+      animation-range:
+        entry 0% entry 1550%,
+        exit -400% exit 500%;
+      filter: blur(20px);
+      opacity: 0.6;
+    }
+
+    .item:hover ~ .glow {
+      transform: translateX(60px) scale(1.2) rotate(6deg);
+      width: 160px;
+    }
+  }
+}
+
+@keyframes scale {
+  0% {
+    filter: blur(20px);
+    scale: 0.9;
+    opacity: 0.1;
+    translate: 60px 20px;
+  }
+}
+
+@keyframes figure {
+  0% {
+    filter: blur(60px);
+    opacity: 1;
+    scale: 4;
+    translate: 240px 20px;
+  }
+}
+
+.blur {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    red 10%,
+    transparent 100%
+  );
+}

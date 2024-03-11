@@ -1,0 +1,17 @@
+.socials {
+  display: flex;
+  gap: 2ch;
+
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1ch;
+
+    svg {
+      height: 8px;
+      stroke-width: 1;
+      color: var(--color-text-1);
+    }
+  }
+}

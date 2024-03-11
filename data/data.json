@@ -1,0 +1,141 @@
+{
+    "pages": [
+        {
+            "title": "Home",
+            "description": "This is the home page",
+            "action": "/",
+            "path": "/home",
+            "menuIcon": "home.svg",
+            "views": 100,
+            "content": "<p>Welcome to the home page</p>",
+            "videos": [
+                {
+                    "title": "Video 1",
+                    "cover": "video1.jpg",
+                    "src": "video1.mp4",
+                    "path": "/video1"
+                }
+            ]
+        },
+        {
+            "title": "Craft",
+            "description": "This is the home page",
+            "action": "/",
+            "path": "/craft",
+            "views": 100,
+            "content": "<p>Welcome to the crafts page</p>",
+            "videos": [
+                {
+                    "title": "Video 1",
+                    "cover": "video1.jpg",
+                    "src": "/video/1-memorisely.mp4",
+                    "path": "/video1"
+                },
+                {
+                    "title": "Video 1",
+                    "cover": "video1.jpg",
+                    "src": "/video/1-memorisely.mp4",
+                    "path": "/video1"
+                },
+                {
+                    "title": "Video 1",
+                    "cover": "video1.jpg",
+                    "src": "/video/1-memorisely.mp4",
+                    "path": "/video1"
+                }
+            ]
+        },
+        {
+            "title": "Work",
+            "description": "This is the work page",
+            "action": "/work",
+            "path": "/work",
+            "menuIcon": "work.svg",
+            "views": 200,
+            "content": "<p>Welcome to the work page</p>",
+            "projects": [
+                {
+                    "name": "Project 1",
+                    "description": "This is project 1",
+                    "year": 2020,
+                    "links": {
+                        "behance": "https://behance.net/project1",
+                        "figma": "https://figma.com/project1"
+                    },
+                    "content": {
+                        "assets": [
+                            "asset1.jpg",
+                            "asset2.jpg"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "title": "About",
+            "description": "This is the about page",
+            "action": "/about",
+            "path": "/about",
+            "menuIcon": "about.svg",
+            "views": 150,
+            "content": "<p>Welcome to the about page</p>",
+            "name": "John Doe",
+            "location": "New York, USA",
+            "contact": "john.doe@example.com"
+        },
+        {
+            "title": "Awards",
+            "description": "This is the awards page",
+            "action": "/awards",
+            "path": "/awards",
+            "menuIcon": "awards.svg",
+            "views": 50,
+            "content": "<p>Welcome to the awards page</p>",
+            "awards": [
+                {
+                    "title": "Weekly Design Challange",
+                    "company": "Memorisely",
+                    "link": "https://memorisely.com"
+                },
+                {
+                    "title": "Community Award Winner",
+                    "company": "Figma",
+                    "link": "https://figma.com"
+                },
+                {
+                    "title": "Featured",
+                    "company": "Unsplash",
+                    "link": "https://unsplash.com"
+                }
+            ]
+        },
+        {
+            "title": "Contact",
+            "description": "This is the contact page",
+            "action": "/contact",
+            "path": "/contact",
+            "menuIcon": "contact.svg",
+            "views": 75,
+            "content": "<p>Welcome to the contact page</p>",
+            "email": "john.doe@example.com",
+            "phone": "+1234567890",
+            "socials": {
+                "figma": "https://www.figma.com/@lona",
+                "linkedin": "https://linkedin.com/in/lona",
+                "instagram": "https://www.instagram.com/lonamalsia",
+                "unsplash": "http://unsplash.com/@istlona",
+                "behance": "http://be.net/istlona",
+                "dribbble": "https://dribbble.com/lona"
+            }
+        },
+        {
+            "title": "Resume",
+            "description": "This is the resume page",
+            "action": "/resume",
+            "path": "/resume",
+            "menuIcon": "resume.svg",
+            "views": 125,
+            "content": "<p>Welcome to the resume page</p>"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+h1,
+.h1 {
+  font-size: 6rem;
+  text-wrap: balance;
+  font-weight: 100;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.accent {
+  background-image: radial-gradient(
+    33.71% 127.73% at 69.54% 107.81%,
+    var(--color-accent-light) 0%,
+    var(--color-accent) 35.44%,
+    var(--color-text-1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
