@@ -1113,6 +1113,11 @@
   dependencies:
     "@types/estree" "*"
 
+"@types/annyang@^2.6.5":
+  version "2.6.5"
+  resolved "https://registry.yarnpkg.com/@types/annyang/-/annyang-2.6.5.tgz#28ea77ab0e539112047dba9b5dc4aefbd4e38732"
+  integrity sha512-EqO6aS1ihvX0DfiVCiEE7FZ86yxVEZJ6yVHmlmGLO3yrThseR45Up+eXPQfGCNWQxmPEzPeBohpVhij5lrEk6g==
+
 "@types/css-font-loading-module@^0.0.13":
   version "0.0.13"
   resolved "https://registry.yarnpkg.com/@types/css-font-loading-module/-/css-font-loading-module-0.0.13.tgz#22f104350e1123ddcda052843cd0038018bc48c8"
@@ -1366,6 +1371,11 @@ ajv@^6.12.4:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
+
+annyang@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/annyang/-/annyang-2.6.1.tgz#93140d7014f268a9d6c4319505715b0469dec856"
+  integrity sha512-KfO6FVFmE7H7epXgAWRoGITShVqsDs6zLKuTxDiJHZmAVnpKeUAKiMUIr7hDXbNUOqRIB3RVTQQd/Yaf4ULauw==
 
 ansi-regex@^5.0.1:
   version "5.0.1"

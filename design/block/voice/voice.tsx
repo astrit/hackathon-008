@@ -1,50 +1,43 @@
 import React, { useEffect, useState } from "react"
-import { usePathname, useRouter } from "next/navigation"
+import { useRouter } from "next/navigation"
 import { useHotkeys } from "react-hotkeys-hook"
 
 export default function Voice() {
   const router = useRouter()
   const [listening, setListening] = useState(false)
-  const [recognition, setRecognition] = useState<SpeechRecognition | null>(null)
 
-  const goToHome = () => {
+  const checkAccessibility = () => {
     router.push("/a11y")
   }
 
   useHotkeys("ctrl+k", () => setListening(!listening))
 
   useEffect(() => {
-    if ("SpeechRecognition" in window) {
-      const recognitionInstance = new window.SpeechRecognition()
-      recognitionInstance.onresult = (event) => {
-        const result = event.results[0][0].transcript
-        if (result.includes("go to home")) {
-          goToHome()
-          console.log("Going to home")
-        } else if (result.includes("go to here")) {
-          goToHome()
-          console.log("Going to here")
-        } else if (result.includes("go to there")) {
-          goToHome()
-          console.log("Going to there")
-        }
-        setListening(false)
-      }
-      setRecognition(recognitionInstance)
-    } else {
-      console.log("Browser does not support Speech Recognition.")
-    }
-  }, [])
+    if (typeof window !== "undefined" && "annyang" in window) {
+      const annyang = (window as any).annyang
 
-  useEffect(() => {
-    if (recognition) {
+      const commands = {
+        "check accessibility": () => {
+          console.log("Going to home")
+          checkAccessibility()
+        },
+        "go to here": () => {
+          console.log("Going to here")
+        },
+        "go to there": () => {
+          console.log("Going to there")
+        },
+      }
+
+      annyang.addCommands(commands)
+
       if (listening) {
-        recognition.start()
+        annyang.start()
       } else {
-        recognition.stop()
+        annyang.pause()
       }
     }
-  }, [listening, recognition])
+  }, [listening])
 
   return (
     <div>

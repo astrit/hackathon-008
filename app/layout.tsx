@@ -58,6 +58,7 @@ export default function RootLayout({
           enableColorScheme={false}
           enableSystem={true}
         >
+          <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
           <Favicon />
           <Data>
             <Fonts>
