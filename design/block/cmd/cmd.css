@@ -101,8 +101,8 @@
 }
 
 [cmdk-list] {
-  height: 400px;
-  max-height: 400px;
+  height: 460px;
+  /* max-height: 400px; */
   overflow: auto;
   overscroll-behavior: contain;
   transition: 100ms ease;
@@ -153,6 +153,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 8px;
+  opacity: 0.4;
 }
 
 [cmdk-empty] {
@@ -212,4 +213,12 @@
   [cmdk-list-sizer] & {
     height: 100% !important;
   }
+}
+
+[data-ai="true"] {
+  border: 1px solid hsl(157.94deg 100% 60% / 0.1);
+  background-color: hsl(157.94deg 100% 60% / 0.02);
+  color: var(--color-text-1);
+  border-radius: 8px;
+  margin-bottom: 24px;
 }

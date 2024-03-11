@@ -130,7 +130,7 @@ export function CMD({
 function Home({ searchProjects }: { searchProjects: Function }) {
   return (
     <>
-      <Command.Group>
+      <Command.Group data-ai>
         <Item
           shortcut="⇧ A"
           onSelect={() => {

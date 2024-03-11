@@ -10,7 +10,7 @@ import "@/nav/nav.css"
 const Links = [
   { href: "/", label: "Green GPT" },
   { href: "/features", label: "Features" },
-  { href: "/a11y", label: "A11y" },
+  { href: "/a11y", label: "Check" },
 ]
 
 export default function Nav() {
