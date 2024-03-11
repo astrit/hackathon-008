@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { useRouter } from "next/navigation"
 import * as gest from "gest"
 import { useHotkeys } from "react-hotkeys-hook"
+import { toast, Toaster } from "sonner"
 
 declare module "gest" {
   export function start(): void
@@ -28,12 +29,18 @@ export default function Motion() {
     router.push("/")
   }
 
-  useHotkeys("ctrl+c", (): void => setMotion(!motion))
+  useHotkeys("ctrl+c", (): void => {
+    toast.success("Motion Gestures commands are available now!")
+    setMotion(!motion)
+  })
 
   useEffect(() => {
     if (gest) {
       if (motion) {
         navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
+          videoRef.current = document.querySelector(
+            ".gest-video"
+          ) as HTMLVideoElement | null
           if (videoRef.current) {
             videoRef.current.srcObject = stream
             gest.start()
@@ -42,8 +49,10 @@ export default function Motion() {
             }) {
               if (gesture.direction === "Right") {
                 console.log("Gesture detected!", gesture)
+                toast.success("Motion Gesture: " + gesture.direction)
                 checkAccessibility()
-              } else {
+              } else if (gesture.direction === "Left") {
+                toast.success("Motion Gesture: " + gesture.direction)
                 goHome()
               }
             })
@@ -65,11 +74,5 @@ export default function Motion() {
     }
   }, [motion, gest])
 
-  return (
-    <div>
-      <h1>Motion</h1>
-      <p>{motion ? "Scanning..." : "Press Ctrl+C to start motion gestures"}</p>
-      <video ref={videoRef} style={{ display: motion ? "block" : "none" }} />
-    </div>
-  )
+  return <video className="motion-video" ref={videoRef} />
 }

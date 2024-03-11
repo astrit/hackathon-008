@@ -117,17 +117,20 @@ window.gest = (function (window) {
 	init = function () {
 		//create required DOM elements
 		video = document.createElement('video');
+		video.classList.add('gest-video');
 		canvas = document.createElement('canvas');
+		canvas.classList.add('gest-canvas')
 
 		if (!!video.canPlayType && !!(canvas.getContext && canvas.getContext('2d')) && !!navigator.getUserMedia) { //check browser support
 			//setup DOM elements
 			
 			video.width = 300;
 			video.height = 225;
-			video.setAttribute('style', 'visibility: hidden;');
+			// video.setAttribute('style', 'visibility: hidden;');
 			document.body.appendChild(video);
 
-			canvas.setAttribute('style', 'width: 300px; display: none;');
+			// canvas.setAttribute('style', 'width: 300px; display: none;');
+			// canvas.setAttribute('style', 'width: 300px; display: none;');
 			document.body.appendChild(canvas);
 			context = canvas.getContext('2d');
 		} else {

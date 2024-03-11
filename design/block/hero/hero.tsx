@@ -79,8 +79,8 @@ export default function Hero() {
           </div>
         ))}
 
-        <Voice />
-        <Motion />
+        {/* <Voice /> */}
+        {/* <Motion /> */}
       </div>
     </div>
   )

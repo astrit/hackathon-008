@@ -4,6 +4,8 @@ import React, { createContext, useEffect, useRef, useState } from "react"
 import { usePathname, useRouter } from "next/navigation"
 import { CMD } from "@/cmd/cmd"
 import Cursor from "@/cursor/cursor"
+import Motion from "@/motion/motion"
+import Voice from "@/voice/voice"
 import { ThemeProvider as NextThemesProvider } from "next-themes"
 import { type ThemeProviderProps } from "next-themes/dist/types"
 import { Toaster } from "sonner"
@@ -85,6 +87,8 @@ export function Theme({ children, ...props }: ThemeProviderProps) {
           duration={4428}
         />
         <CMD isOpen={isOpen} toggleCmd={toggleCmd} />
+        <Motion />
+        <Voice />
         {/* <Cursor /> */}
       </Controller.Provider>
     </NextThemesProvider>

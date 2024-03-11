@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { useHotkeys } from "react-hotkeys-hook"
+import { toast, Toaster } from "sonner"
 
 export default function Voice() {
   const router = useRouter()
@@ -10,7 +11,10 @@ export default function Voice() {
     router.push("/a11y")
   }
 
-  useHotkeys("ctrl+k", () => setListening(!listening))
+  useHotkeys("ctrl+v", () => {
+    toast.success("Voice commands are available now!")
+    setListening(!listening)
+  })
 
   useEffect(() => {
     if (typeof window !== "undefined" && "annyang" in window) {
@@ -19,6 +23,7 @@ export default function Voice() {
       const commands = {
         "check accessibility": () => {
           console.log("Going to home")
+          toast.success("Voice: Checking accessibility")
           checkAccessibility()
         },
         "go to here": () => {
@@ -39,10 +44,5 @@ export default function Voice() {
     }
   }, [listening])
 
-  return (
-    <div>
-      <h1>Voice</h1>
-      <p>{listening ? "Listening..." : "Press Ctrl+K to start listening"}</p>
-    </div>
-  )
+  return listening ? "Listening..." : null
 }

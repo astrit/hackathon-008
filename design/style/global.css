@@ -83,3 +83,47 @@ html {
     border-color: var(--color-text-4);
   }
 }
+
+/* canvas {
+  display: none;
+} */
+
+.gest-video {
+  position: fixed;
+  display: flex;
+  bottom: 80px;
+  right: 40px;
+  aspect-ratio: 1/1;
+  width: 300px;
+  height: auto;
+  /* width: 100px; */
+  /* height: 100px; */
+  pointer-events: none;
+  z-index: 1;
+  object-fit: cover;
+  object-position: center;
+  visibility: visible !important;
+  border-radius: 200px;
+  /* filter: grayscale(100%); */
+  transform: scaleX(-1);
+  outline-offset: 10px;
+  outline: 1px dashed var(--color-text-3);
+  transform: scale(0.6);
+}
+
+/* body > video:not(.motion-video) {
+  left: -90000px;
+  position: fixed;
+  visibility: visible;
+} */
+
+/* canvas {
+  width: 600px;
+  height: 600px;
+} */
+
+.gest-canvas {
+  visibility: hidden;
+  position: fixed;
+  left: -9000px;
+}
