@@ -76,8 +76,8 @@
   transition-property: none;
 
   &[data-selected="true"] {
-    background: var(--grayA3);
-    color: var(--gray12);
+    background: var(--color-text-4);
+    color: var(--color-text-1);
   }
 
   &[data-disabled="true"] {
@@ -101,7 +101,7 @@
 }
 
 [cmdk-list] {
-  height: min(330px, calc(var(--cmdk-list-height)));
+  height: 400px;
   max-height: 400px;
   overflow: auto;
   overscroll-behavior: contain;
@@ -196,5 +196,20 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+  }
+}
+
+.cmd-chat {
+  border: 2px solid hsla(219.37, 9.0988%, 31.952%, 0.2);
+  padding: 20px;
+  /* margin: 20px; */
+  border-radius: 18px;
+  min-height: 100%;
+  display: flex;
+  background-color: var(--color-backdrop);
+  color: var(--color-text-1);
+
+  [cmdk-list-sizer] & {
+    height: 100% !important;
   }
 }

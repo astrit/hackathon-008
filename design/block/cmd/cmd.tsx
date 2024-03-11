@@ -116,11 +116,11 @@ export function CMD({
           }}
         />
         <Command.List>
-          <Command.Empty>No results found.</Command.Empty>
+          {/* <Command.Empty>No results found.</Command.Empty> */}
           {activePage === "home" && (
-            <Home searchProjects={() => setPages([...pages, "projects"])} />
+            <Home searchProjects={() => setPages([...pages, "green-gpt"])} />
           )}
-          {activePage === "projects" && <Projects />}
+          {activePage === "green-gpt" && <Projects />}
         </Command.List>
       </Command.Dialog>
     </>
@@ -130,25 +130,29 @@ export function CMD({
 function Home({ searchProjects }: { searchProjects: Function }) {
   return (
     <>
-      <Command.Group heading="Projects">
+      <Command.Group>
         <Item
-          shortcut="S P"
+          shortcut="⇧ A"
           onSelect={() => {
             searchProjects()
           }}
         >
-          Search Projects...
+          Ask AI
         </Item>
-        <Item>Create New Project...</Item>
       </Command.Group>
-      <Command.Group heading="Teams">
+      {/* <Command.Group heading="Teams">
         <Item shortcut="⇧ P">Search Teams...</Item>
         <Item>Create New Team...</Item>
+      </Command.Group> */}
+      <Command.Group heading="Voice & Motion">
+        <Item shortcut="⇧ C">Motion Gestures</Item>
+        <Item shortcut="⇧ C">Voice Commands</Item>
       </Command.Group>
-      <Command.Group heading="Help">
-        <Item shortcut="⇧ D">Search Docs...</Item>
-        <Item>Send Feedback...</Item>
-        <Item>Contact Support</Item>
+      <Command.Group heading="A11y">
+        <Item shortcut="⇧ C">Check contrast</Item>
+        <Item shortcut="⇧ C">Increase Contrast</Item>
+        <Item shortcut="⇧ M">Reduce Motion</Item>
+        <Item shortcut="⇧ T">Reduce Transparency</Item>
       </Command.Group>
     </>
   )
@@ -157,12 +161,14 @@ function Home({ searchProjects }: { searchProjects: Function }) {
 function Projects() {
   return (
     <>
-      <Item>Project 1</Item>
+      <div className="cmd-chat">chat</div>
+
+      {/* <Item>Project 1</Item>
       <Item>Project 2</Item>
       <Item>Project 3</Item>
       <Item>Project 4</Item>
       <Item>Project 5</Item>
-      <Item>Project 6</Item>
+      <Item>Project 6</Item> */}
     </>
   )
 }

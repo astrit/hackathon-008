@@ -3,6 +3,6 @@
   width: 960px;
   min-height: 100vh;
   margin: 0 auto;
-  align-items: flex-start;
+  align-items: center;
   gap: 200px;
 }

@@ -19,12 +19,13 @@ function Right({ children }: { children?: React.ReactNode }) {
   const elements = [<Pixels />, <Settings />]
   return (
     <div className="sides right">
-      {elements.map((element, index) => (
+      {/* {elements.map((element, index) => (
         <React.Fragment key={index}>
           {element}
           {index < elements.length - 1 && <Split />}
         </React.Fragment>
-      ))}
+      ))} */}
+      Hackathon 008
     </div>
   )
 }
@@ -32,7 +33,7 @@ function Right({ children }: { children?: React.ReactNode }) {
 export default function Footer() {
   return (
     <footer>
-      <Left>Test</Left>
+      <Left>2024</Left>
       <Right />
     </footer>
   )

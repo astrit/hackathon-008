@@ -3,6 +3,7 @@ import Nav from "@/nav/nav"
 
 import "@/header/header.css"
 
+import Search from "@/search/search"
 import Tunes from "@/tunes/tunes"
 
 function Left({ children }: { children: ReactNode }) {
@@ -18,7 +19,9 @@ export default function Header() {
       <Left>
         <Nav />
       </Left>
-      <Right>right</Right>
+      <Right>
+        <Search />
+      </Right>
     </header>
   )
 }

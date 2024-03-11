@@ -20,7 +20,7 @@
     gap: 1lh;
 
     opacity: 0;
-    animation: fade 668ms ease forwards;
+    animation: fade 1668ms ease forwards;
     translate: 0 0.4lh;
 
     &.intro {
