@@ -1,7 +1,7 @@
 "use client"
 
 import { useContext, useEffect, useRef, useState } from "react"
-import Astrit from "@/astrit/astrit"
+import Green GPT from "@/astrit/astrit"
 import Icon from "@/icon/icon"
 import Link from "@/link/link"
 import { shuffle } from "$/shuffle/shuffle"
@@ -103,7 +103,7 @@ export default function Hero() {
 
   return (
     <div className="hero" onContextMenu={handleContextMenu} ref={heroRef}>
-      <Astrit />
+      <Green GPT />
       <div className="hero-content">
         {Object.keys(heroItems).map((group) => (
           <div className={`sec ` + group} key={group}>

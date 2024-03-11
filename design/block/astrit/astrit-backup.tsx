@@ -1,6 +1,6 @@
 import "@/astrit/astrit.css"
 
-export default function Astrit() {
+export default function Green GPT() {
   return (
     <div className="astrit">
       {/* Best one yet working */}

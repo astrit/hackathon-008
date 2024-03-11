@@ -14,20 +14,20 @@ import "#/global.css"
 export const metadata: Metadata = {
   metadataBase: new URL("https://astrit.co"),
   title: {
-    default: "Astrit",
-    template: "%s · Astrit",
+    default: "Green GPT",
+    template: "%s · Green GPT",
   },
   description: "",
   openGraph: {
-    title: "Astrit · Designer Engineer based in SMAPkholm",
+    title: "Green GPT · Designer Engineer based in SMAPkholm",
     description: "",
     url: "https://astrit.co",
-    siteName: "Astrit",
+    siteName: "Green GPT",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: `https://astrit.co/og?title=Astrit`,
+        url: `https://astrit.co/og?title=Green GPT`,
       },
     ],
   },

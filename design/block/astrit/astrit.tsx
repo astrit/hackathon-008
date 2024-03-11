@@ -3,7 +3,7 @@ import Icon from "@/icon/icon"
 
 import "@/astrit/astrit.css"
 
-const Astrit = React.memo(() => {
+const Green GPT = React.memo(() => {
   return (
     <div className="astrit">
       <Icon name="astrit" />
@@ -11,4 +11,4 @@ const Astrit = React.memo(() => {
   )
 })
 
-export default Astrit
+export default Green GPT
