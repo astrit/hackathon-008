@@ -117,7 +117,7 @@ window.gest = (function (window) {
 	init = function () {
 		//create required DOM elements
 		video = document.createElement('video');
-		video.classList.add('gest-video');
+		video.classList.add('gest-video-can');
 		canvas = document.createElement('canvas');
 		canvas.classList.add('gest-canvas')
 
@@ -130,7 +130,7 @@ window.gest = (function (window) {
 			document.body.appendChild(video);
 
 			// canvas.setAttribute('style', 'width: 300px; display: none;');
-			// canvas.setAttribute('style', 'width: 300px; display: none;');
+			canvas.setAttribute('style', 'width: 300px;');
 			document.body.appendChild(canvas);
 			context = canvas.getContext('2d');
 		} else {

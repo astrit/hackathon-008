@@ -41,9 +41,11 @@ export default function Motion() {
           videoRef.current = document.querySelector(
             ".gest-video"
           ) as HTMLVideoElement | null
+
           if (videoRef.current) {
             videoRef.current.srcObject = stream
             gest.start()
+            videoRef.current.classList.add("gest-video-on")
             gest.options.subscribeWithCallback(function (gesture: {
               direction: any
             }) {
@@ -69,10 +71,15 @@ export default function Motion() {
           })
 
           videoRef.current.srcObject = null
+          videoRef.current.classList.remove("gest-video-on")
         }
       }
     }
   }, [motion, gest])
 
-  return <video className="motion-video" ref={videoRef} />
+  return <video className="gest-video" ref={videoRef} autoPlay />
+  // return motion ? null : null
+
+  // return <video className="motion-video" ref={videoRef} />
+  // return <video className="motion-video" ref={videoRef} />
 }
