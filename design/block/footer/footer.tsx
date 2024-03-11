@@ -1,14 +1,7 @@
 "use client"
 
-import React, { useEffect, useRef } from "react"
-import Address from "@/address/address"
-import Copy from "@/copy/copy"
-import Forecast from "@/forecast/forecast"
+import React from "react"
 import Pixels from "@/pixels/pixels"
-import Progress from "@/progress/progress"
-import Socials from "@/socials/socials"
-import Time from "@/time/time"
-import Views from "@/views/views"
 
 import "@/footer/footer.css"
 
@@ -23,15 +16,17 @@ function Left({ children }: { children?: React.ReactNode }) {
 }
 
 function Right({ children }: { children?: React.ReactNode }) {
-  const elements = [
-    <Pixels />,
-    <Views />,
-    <Time />,
-    <Forecast />,
-    <Address />,
-    <Settings />,
-  ]
-  return <div className="sides right">test</div>
+  const elements = [<Pixels />, <Settings />]
+  return (
+    <div className="sides right">
+      {elements.map((element, index) => (
+        <React.Fragment key={index}>
+          {element}
+          {index < elements.length - 1 && <Split />}
+        </React.Fragment>
+      ))}
+    </div>
+  )
 }
 
 export default function Footer() {

@@ -18,5 +18,10 @@ export default function HomePage() {
 
   const { title, description, content } = data.pages[0]
 
-  return <Home>Here goes the content</Home>
+  return (
+    <Home>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </Home>
+  )
 }
