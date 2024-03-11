@@ -1,7 +1,6 @@
 "use client"
 
 import { useContext, useEffect, useRef, useState } from "react"
-import Green GPT from "@/astrit/astrit"
 import Icon from "@/icon/icon"
 import Link from "@/link/link"
 import { shuffle } from "$/shuffle/shuffle"
@@ -37,7 +36,7 @@ export default function Hero() {
       ) as HTMLElement[]
       const options: ShuffleOptions = {
         iterations: 12,
-        fps: 24,
+        fps: 60,
         onComplete: (elm) => {
           if (elm === shuffleMe[shuffleMe.length - 1]) {
           }
@@ -57,38 +56,16 @@ export default function Hero() {
   // prettier-ignore
   const heroItems: { [key: string]: HeroItem[] } = {
   "intro": [
-    { name: "hero-ski", markup: <span>{`deƨign · cod>_ · oss`}</span> },
-    { name: "hero-sin", markup: <span>{`スタート ~ 2008`}</span> },
-    { name: "hero-eps", 
-      markup: 
-      <>
-        <span>{`©`}</span>
-        <span>{`≈`}</span>
-        <Link href="https://css.gg" >
-          <span>{`CSS.GG ↗`}</span>
-        </Link>
-        <span> & </span>
-        <Link href="https://glyf.app" >
-          <span>{`GLYF.APP ↗`}</span>
-        </Link>
-      </> },
+    { name: "hero-ski", markup: <span>{`accessability`}</span> },
+    { name: "hero-sin", markup: <span>{`contrast check`}</span> },
+    { name: "hero-sin", markup: <span>{`contrast check`}</span> },
+    { name: "hero-sin", markup: <span>{`contrast check`}</span> },
   ],
   "work": [
     { name: "hero-now", 
       markup: 
-        <>
-          <span>{`Design`}</span>
-          <span>{`×`}</span>
-          <span>{`Code`}</span>
-          <span>{`~`}</span>
-          <Link href="https://glyf.app">
-            <span>{`SEB™`}</span>
-          </Link>
-        </> },
-    { name: "hero-loc", markup: <span>{`↪ Stockholm, Sweden`}</span> },
-  ],
-  "skills": [
-    { name: "hero-pro", markup: <><span>{`スキル`}</span> <span className="fade">{`×`}</span> <span className="mono">{`</> {@} ($) [:]`}</span></> },
+      <span>{`seb`}</span> },
+    { name: "hero-loc", markup: <span>{`green`}</span> },
   ],
   "searching": [
     {
@@ -110,7 +87,6 @@ export default function Hero() {
 
   return (
     <div className="hero" onContextMenu={handleContextMenu} ref={heroRef}>
-      <Green GPT />
       <div className="hero-content">
         {Object.keys(heroItems).map((group) => (
           <div className={`sec ` + group} key={group}>
