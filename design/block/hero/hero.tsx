@@ -56,10 +56,10 @@ export default function Hero() {
   // prettier-ignore
   const heroItems: { [key: string]: HeroItem[] } = {
   "intro": [
-    { name: "hero-ski", markup: <span>{`accessability`}</span> },
-    { name: "hero-sin", markup: <span>{`contrast check`}</span> },
-    { name: "hero-sin", markup: <span>{`contrast check`}</span> },
-    { name: "hero-sin", markup: <span>{`contrast check`}</span> },
+    { name: "hero-sin", markup: <span>{`Ask AI - Green GPT`}</span> },
+    { name: "hero-ski", markup: <span>{`Accessability Checker`}</span> },
+    { name: "hero-sin", markup: <span>{`Navigate with your voice`}</span> },
+    { name: "hero-sin", markup: <span>{`Motion Gestures Navigation`}</span> },
   ],
 }
 

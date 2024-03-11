@@ -7,7 +7,7 @@ export default function Features() {
       <ul>
         <li>Ask AI</li>
         <li>Accessability Checker</li>
-        <li>Navigation: Audio & Motion</li>
+        <li>Navigation: Voice & Motion</li>
       </ul>
     </Content>
   )
