@@ -17,11 +17,17 @@
   .sec {
     display: flex;
     flex-direction: column;
-    gap: 1lh;
-
+    gap: 2lh;
+    color: var(--color-text-3);
     opacity: 0;
-    animation: fade 1668ms ease forwards;
+    animation: fade 468ms ease forwards;
     translate: 0 0.4lh;
+
+    svg {
+      height: 1.4lh;
+      stroke-width: 2px;
+      stroke: var(--color-text-1);
+    }
 
     &.intro {
       animation-delay: 40ms;

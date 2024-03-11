@@ -8,6 +8,8 @@ import { Controller } from "$/theme/provider"
 
 import "@/hero/hero.css"
 
+import Voice from "@/voice/voice"
+
 interface HeroItem {
   name: string
   markup: JSX.Element
@@ -36,7 +38,7 @@ export default function Hero() {
       ) as HTMLElement[]
       const options: ShuffleOptions = {
         iterations: 12,
-        fps: 60,
+        fps: 24,
         onComplete: (elm) => {
           if (elm === shuffleMe[shuffleMe.length - 1]) {
           }
@@ -56,10 +58,10 @@ export default function Hero() {
   // prettier-ignore
   const heroItems: { [key: string]: HeroItem[] } = {
   "intro": [
-    { name: "hero-sin", markup: <span>{`Ask AI - Green GPT`}</span> },
-    { name: "hero-ski", markup: <span>{`Accessability Checker`}</span> },
-    { name: "hero-sin", markup: <span>{`Navigate with your voice`}</span> },
-    { name: "hero-sin", markup: <span>{`Motion Gestures Navigation`}</span> },
+    { name: "hero-sin", markup: <><Icon name="copy" /><span>{`Ask AI - Green GPT`}</span></> },
+    { name: "hero-ski", markup: <><Icon name="check" /><span>{`Accessability Checker`}</span></> },
+    { name: "hero-sin", markup: <><Icon name="voice" /><span>{`Navigate with your voice`}</span></> },
+    { name: "hero-sin", markup: <><Icon name="motion" /><span>{`Motion Gestures Navigation`}</span></> },
   ],
 }
 
@@ -75,6 +77,8 @@ export default function Hero() {
             ))}
           </div>
         ))}
+
+        <Voice />
       </div>
     </div>
   )

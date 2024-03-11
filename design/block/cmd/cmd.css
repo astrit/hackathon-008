@@ -23,6 +23,10 @@
   overflow: hidden;
   transition: transform 100ms ease;
   outline: none;
+
+  svg {
+    stroke-width: 2px;
+  }
 }
 
 [cmdk-input] {
@@ -209,10 +213,6 @@
   display: flex;
   background-color: var(--color-backdrop);
   color: var(--color-text-1);
-
-  [cmdk-list-sizer] & {
-    height: 100% !important;
-  }
 }
 
 [data-ai="true"] {
@@ -221,4 +221,17 @@
   color: var(--color-text-1);
   border-radius: 8px;
   margin-bottom: 24px;
+}
+
+[cmdk-list-sizer] {
+  height: 100%;
+}
+
+[cmdk-input] {
+  border: 1px solid hsla(0, 0%, 73%, 0.1);
+  background-color: hsla(0, 0%, 11%, 0.1);
+  color: var(--color-text-1);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  padding: 18px;
 }

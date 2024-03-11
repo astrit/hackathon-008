@@ -3,6 +3,7 @@
 import "@/cmd/cmd.css"
 
 import React from "react"
+import Icon from "@/icon/icon"
 import { Command } from "cmdk"
 
 export function CMD({
@@ -140,19 +141,29 @@ function Home({ searchProjects }: { searchProjects: Function }) {
           Ask AI
         </Item>
       </Command.Group>
-      {/* <Command.Group heading="Teams">
-        <Item shortcut="⇧ P">Search Teams...</Item>
-        <Item>Create New Team...</Item>
-      </Command.Group> */}
+
       <Command.Group heading="Voice & Motion">
-        <Item shortcut="⇧ C">Motion Gestures</Item>
-        <Item shortcut="⇧ C">Voice Commands</Item>
+        <Item shortcut="⇧ C">
+          <Icon name="motion" height="10" />
+          Motion Gestures
+        </Item>
+        <Item shortcut="⇧ C">
+          <Icon name="voice" height="10" /> Voice Commands
+        </Item>
       </Command.Group>
       <Command.Group heading="A11y">
-        <Item shortcut="⇧ C">Check contrast</Item>
-        <Item shortcut="⇧ C">Increase Contrast</Item>
-        <Item shortcut="⇧ M">Reduce Motion</Item>
-        <Item shortcut="⇧ T">Reduce Transparency</Item>
+        <Item shortcut="⇧ C">
+          <Icon name="search" height="10" /> Check contrast
+        </Item>
+        <Item shortcut="⇧ C">
+          <Icon name="search" height="10" /> Increase Contrast
+        </Item>
+        <Item shortcut="⇧ M">
+          <Icon name="search" height="10" /> Reduce Motion
+        </Item>
+        <Item shortcut="⇧ T">
+          <Icon name="search" height="10" /> Reduce Transparency
+        </Item>
       </Command.Group>
     </>
   )

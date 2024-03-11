@@ -74,6 +74,16 @@
             "name": "check",
             "path": "<polyline points='20 6 9 17 4 12' />",
             "box": "0 0 24 24"
+        },
+        {
+            "name": "voice",
+            "path": "<path d='M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z'></path><path d='M19 10v2a7 7 0 0 1-14 0v-2'></path><line x1='12' y1='19' x2='12' y2='23'></line><line x1='8' y1='23' x2='16' y2='23'></line>",
+            "box": "0 0 24 24"
+        },
+        {
+            "name": "motion",
+            "path": "<path d='M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2'></path>",
+            "box": "0 0 24 24"
         }
     ]
 }
