@@ -18,9 +18,7 @@ export default function Header() {
       <Left>
         <Nav />
       </Left>
-      <Right>
-        <Tunes />
-      </Right>
+      <Right>right</Right>
     </header>
   )
 }
