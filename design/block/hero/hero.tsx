@@ -61,8 +61,9 @@ export default function Hero() {
   "intro": [
     { name: "hero-sin", markup: <><Icon name="copy" /><span>{`Ask AI - Green GPT`}</span></> },
     { name: "hero-ski", markup: <><Icon name="check" /><span>{`Accessability Checker`}</span></> },
-    { name: "hero-sin", markup: <><Icon name="voice" /><span>{`Navigate with your voice`}</span></> },
+    { name: "hero-sin", markup: <><Icon name="voice" /><span>{`Hands-free navigation with your voice`}</span></> },
     { name: "hero-sin", markup: <><Icon name="motion" /><span>{`Motion Gestures Navigation`}</span></> },
+    { name: "hero-sin", markup: <><Icon name="figma" /><span>{`Figma (Tokens, Guidelines, A11y)`}</span></> },
   ],
 }
 

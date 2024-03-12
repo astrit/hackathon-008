@@ -16,6 +16,11 @@ export default function HomePage() {
 
   return (
     <Home>
+      <h1>Green GPT</h1>
+      <p>
+        AI-driven suite of tools enhancing accessibility, delivering optimal
+        user experience for SEB clients.
+      </p>
       <Hero />
     </Home>
   )

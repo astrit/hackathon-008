@@ -1,9 +1,27 @@
 .home {
   display: flex;
+  flex-direction: column;
   width: 960px;
   min-height: 100vh;
   margin: 0 auto;
-  align-items: center;
-  gap: 200px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
   overflow: hidden;
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-text-1);
+
+    & ~ p {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--color-text-2);
+      text-wrap: balance;
+      max-width: 45ch;
+      line-height: 1.4;
+      margin-bottom: 1lh;
+    }
+  }
 }
