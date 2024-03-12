@@ -143,26 +143,26 @@ function Home({ searchProjects }: { searchProjects: Function }) {
       </Command.Group>
 
       <Command.Group heading="Voice & Motion">
-        <Item shortcut="⇧ C">
+        <Item shortcut="⌃ C">
           <Icon name="motion" height="10" />
           Motion Gestures
         </Item>
-        <Item shortcut="⇧ C">
+        <Item shortcut="⌃ V">
           <Icon name="voice" height="10" /> Voice Commands
         </Item>
       </Command.Group>
       <Command.Group heading="A11y">
-        <Item shortcut="⇧ C">
-          <Icon name="search" height="10" /> Check contrast
+        <Item shortcut="⌘ C">
+          <Icon name="plus" height="10" /> Check contrast
         </Item>
-        <Item shortcut="⇧ C">
-          <Icon name="search" height="10" /> Increase Contrast
+        <Item shortcut="⌘ C">
+          <Icon name="plus" height="10" /> Increase Contrast
         </Item>
-        <Item shortcut="⇧ M">
-          <Icon name="search" height="10" /> Reduce Motion
+        <Item shortcut="⌘ M">
+          <Icon name="plus" height="10" /> Reduce Motion
         </Item>
-        <Item shortcut="⇧ T">
-          <Icon name="search" height="10" /> Reduce Transparency
+        <Item shortcut="⌘ T">
+          <Icon name="plus" height="10" /> Reduce Transparency
         </Item>
       </Command.Group>
     </>
