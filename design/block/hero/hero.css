@@ -110,3 +110,34 @@
 }
 
 /* hero comp backround */
+.optz {
+  display: flex;
+  gap: 1lh;
+  margin-top: 40px;
+}
+
+small {
+  /* opacity: 0.5; */
+  text-wrap: balance;
+  line-height: 1.6;
+  color: var(--color-text-2);
+  background-color: var(--color-text-4);
+  padding: 14px 18px;
+  border: 1px solid var(--color-text-4);
+  border-radius: 8px;
+  opacity: 0;
+  animation: fade 468ms ease forwards;
+  translate: 0 0.4lh;
+  animation-delay: 140ms;
+  display: flex;
+  flex-direction: row;
+  gap: 2ch;
+
+  div {
+    opacity: 0.5;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 240ms;
+  }
+}

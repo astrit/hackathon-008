@@ -80,6 +80,17 @@ export default function Hero() {
           </div>
         ))}
 
+        <div className="optz">
+          <small>
+            <kbd>CTRL + V</kbd>
+            <div>Voice commands</div>
+          </small>
+          <small>
+            <kbd>CTRL + C</kbd>
+            <div>Motion Gestures</div>
+          </small>
+        </div>
+
         {/* <Voice /> */}
         {/* <Motion /> */}
       </div>
