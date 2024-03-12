@@ -164,6 +164,9 @@ function Home({ searchProjects }: { searchProjects: Function }) {
         <Item shortcut="⌘ T">
           <Icon name="plus" height="10" /> Reduce Transparency
         </Item>
+        <Item shortcut="\">
+          <Icon name="plus" height="10" /> Change Theme
+        </Item>
       </Command.Group>
     </>
   )

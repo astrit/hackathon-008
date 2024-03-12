@@ -134,3 +134,10 @@ html {
   width: 300px;
   height: 300px;
 }
+
+.wcag {
+  opacity: 0;
+  animation: scaled 468ms ease forwards;
+  translate: 0 0.4lh;
+  scale: 0;
+}
